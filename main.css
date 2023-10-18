@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open-Sans';
+  box-sizing: border-box;
+}
+
+:root {
+      --primary-100: #3F51B5;
+        --primary-200: #757de8;
+        --primary-300: #dedeff;
+        --accent-100: #2196F3;
+        --accent-200: #003f8f;
+        --text-100: #333333;
+        --text-200: #5c5c5c;
+        --bg-100: #FFFFFF;
+        --bg-200: #f5f5f5;
+        --bg-300: #cccccc;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #003f8f, #2196F3)
+}
+
+.app {
+  background: #fff;
+  width: 90%;
+  max-width: 600px;
+  margin: 100px auto 0;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.app h1{
+  font-size: 25px;
+  color: var(--text-100);
+  font-weight: 600;
+  border-bottom: 1px solid #333;
+  padding-bottom: 30px;
+}
+
+.quiz {
+  padding: 20px 0;
+}
+
+.quiz h2 {
+  font-size: 20px;
+  color: var(--text-100);
+  font-weight: 600;
+}
+
+.btn{
+  background: #ebebeb;
+  color: var(--text-100);
+  font-weight: 500;
+  font-size: 15px;
+  width: 100%;
+  border: 0;
+  border-radius: 30px;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s; /*El cambio del color de hover es mas fluido*/
+}
+
+/*Hago que cuando yo clicke el boton, an no poder clickear los demas, el cursor me salga el rojo*/
+.btn:hover:not([disabled]){
+  background: var(--accent-200);
+  color: #fff;
+}
+.btn:disabled{
+  cursor: no-drop; /*Cursor rojo*/
+}
+
+#next-btn {
+  background: var(--accent-200);
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  width: 150px;
+  border: 0;
+  padding: 10px;
+  margin: 20px auto 0;
+  border-radius: 20px;
+  cursor: pointer;
+  display: none; /*El boton se esconde hasta que se seleccione la respuesta de mi quiz*/
+}
+
+.correct{
+  background: #9aeabc;
+}
+
+.incorrect{
+  background: #e69292;
+}
